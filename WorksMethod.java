@@ -1,7 +1,9 @@
 package TaskWork.BasicForAll4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class WorksMethod {
 
@@ -9,6 +11,7 @@ public class WorksMethod {
      * numberOfEmployer - entered by user via scanner
      */
     private static int numberOfEmployee;
+    static Scanner scanner = new Scanner(System.in);
 
     public static int getNumberOfEmployee() {
         return numberOfEmployee;
@@ -36,7 +39,9 @@ public class WorksMethod {
      * method, which changes employee's wages based on rating
      */
     public static List<Employee> employeeSalaryChangeAfterRatingComparison(List<Employee> employeeList) {
-        for (Employee employee : employeeList) {
+        Iterator <Employee> iterator = employeeList.iterator();
+        while(iterator.hasNext()){
+          Employee employee  = iterator.next();
             if (employee.getRating().getRatingScore() == 0) {
             } else {
                 employee.setSalary(employee.getSalary() * employee.getRating().getRatingScore());
@@ -57,9 +62,13 @@ public class WorksMethod {
      * method for print
      */
     public static void print() {
-        List<Employee> object1 = employeeList(getNumberOfEmployee());
-        System.out.println(object1);
-        Object object2 = employeeSalaryChangeAfterRatingComparison(collectionSort(object1));
-        System.out.println(object2);
+        System.out.print("Please enter number of employee: ");
+        WorksMethod.setNumberOfEmployee(scanner.nextInt());
+        List<Employee> employeeListBeforeSalaryBonus = employeeList(getNumberOfEmployee());
+        System.out.println(employeeListBeforeSalaryBonus);
+        System.out.println("-----List of employees where the salary was calculated based on the rating------- ");
+        System.out.println();
+        Object employeeListAfterSalaryBonus = employeeSalaryChangeAfterRatingComparison(collectionSort(employeeListBeforeSalaryBonus));
+        System.out.println(employeeListAfterSalaryBonus);
     }
 }
