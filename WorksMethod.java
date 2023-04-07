@@ -18,6 +18,11 @@ public class WorksMethod {
         WorksMethod.numberOfEmployee = numberOfEmployee;
     }
 
+    /**
+     * Method, witch adds Employee to the List
+     * @param numberOfEmployee - number of Employee
+     * @return List with Employee
+     */
     public static List<Employee> employeeList(int numberOfEmployee) {
         List<Employee> employeeList = new ArrayList<>();
         for (int i = 0; i < numberOfEmployee; i++) {
@@ -52,9 +57,9 @@ public class WorksMethod {
      * method for print
      */
     public static void print() {
-        List<Employee> object = employeeList(getNumberOfEmployee());
-        System.out.println(object);
-        Object object2 = employeeSalaryChangeAfterRatingComparison(collectionSort(object));
+        List<Employee> object1 = employeeList(getNumberOfEmployee());
+        System.out.println(object1);
+        Object object2 = employeeSalaryChangeAfterRatingComparison(collectionSort(object1));
         System.out.println(object2);
     }
 }

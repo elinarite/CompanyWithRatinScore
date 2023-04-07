@@ -7,8 +7,6 @@ import java.util.Random;
 public class GenerationEmployee {
     static Random random = new Random();
 
-  Employee employee = new Employee();
-
     /**
      * method, which generates name of employee
      */
