@@ -66,7 +66,7 @@ public class WorksMethod {
         WorksMethod.setNumberOfEmployee(scanner.nextInt());
         List<Employee> employeeListBeforeSalaryBonus = employeeList(getNumberOfEmployee());
         System.out.println(employeeListBeforeSalaryBonus);
-        System.out.println("-----List of employees where the salary was calculated based on the rating------- ");
+        System.out.println("-----List of employees where the salary was calculated based and sorts on the rating------- ");
         System.out.println();
         Object employeeListAfterSalaryBonus = employeeSalaryChangeAfterRatingComparison(collectionSort(employeeListBeforeSalaryBonus));
         System.out.println(employeeListAfterSalaryBonus);
