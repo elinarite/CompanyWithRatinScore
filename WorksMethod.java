@@ -1,9 +1,6 @@
 package TaskWork.BasicForAll4;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class WorksMethod {
 
@@ -65,6 +62,8 @@ public class WorksMethod {
         System.out.print("Please enter number of employee: ");
         WorksMethod.setNumberOfEmployee(scanner.nextInt());
         List<Employee> employeeListBeforeSalaryBonus = employeeList(getNumberOfEmployee());
+        Collections.sort(employeeListBeforeSalaryBonus);
+        System.out.println("-----List of employees where sorts by name, age and salary------- ");
         System.out.println(employeeListBeforeSalaryBonus);
         System.out.println("-----List of employees where the salary was calculated based and sorts on the rating------- ");
         System.out.println();
