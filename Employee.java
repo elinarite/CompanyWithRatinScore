@@ -1,6 +1,7 @@
 package TaskWork.BasicForAll4;
 
 public class Employee implements Comparable<Employee> {
+    // TODO employeeName имеет избыточное employee, итак понятно что это сотрудник, поэтому пиши  просто name
     private String employeeName;
     private int employeeAge;
     private double salary;

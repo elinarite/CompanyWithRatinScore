@@ -4,9 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+// TODO Читала Пелевина Generation P? Вот оно!
+// Если здесь имелось ввиду класс, который создает сотрудников, то
+// это будет CreateEmployee, тк GenerationEmployee = Поколение сотрудников
 public class GenerationEmployee {
+    // такие вещи объявляй по месту локально
     static Random random = new Random();
 
+    // в джаве есть библиотека которая тебе выдает осмысленные случайные имена - Faker
+    // можно было ее использовать как вариант
     /**
      * method, which generates name of employee
      */
@@ -20,6 +26,9 @@ public class GenerationEmployee {
         return stringBuilder;
     }
 
+    // TODO Нее вот это жесткая ошибка. Конструктор, который создает сотрудника и возвращает его тип
+    // просто создай отдельный статичный метод, не конструктор
+    // createRandomEmployee
     /**
      * constructor, which generates employees
      */
