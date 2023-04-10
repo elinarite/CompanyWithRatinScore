@@ -66,6 +66,7 @@ public class Employee implements Comparable<Employee> {
     public String toString() {
         return "Name: " + name + ", Age: " + age +
                 ", salary " + salary +
+                ", department " + department +
                 ", rating " + rating + "\n";
     }
 }
