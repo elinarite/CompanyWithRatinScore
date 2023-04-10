@@ -44,9 +44,8 @@ public class GeneratorEmployeesList {
      * Sorts Employee by Name, Age and Salary,
      * on the basis of Comparable from the class Employee;
      */
-    private static List<Employee> sortEmployeesByPersonalData(List<Employee> employeeList) {
+    private static void sortEmployeesByPersonalData(List<Employee> employeeList) {
         Collections.sort(employeeList);
-        return employeeList;
     }
 
     /**
