@@ -1,20 +1,15 @@
 package TaskWork.BasicForAll4;
 
 public class Employee implements Comparable<Employee> {
-    // TODO employeeName имеет избыточное employee, итак понятно что это сотрудник, поэтому пиши  просто name
-    private String employeeName;
-    private int employeeAge;
+    private String name;
+    private int age;
     private double salary;
     private Rating rating;
     Department department;
 
-
-    public Employee() {
-    }
-
-    public Employee(String employeeName, int employeeAge, double salary, Rating rating, Department department) {
-        this.employeeName = employeeName;
-        this.employeeAge = employeeAge;
+    public Employee(String name, int age, double salary, Rating rating, Department department) {
+        this.name = name;
+        this.age = age;
         this.salary = salary;
         this.rating = rating;
         this.department = department;
@@ -22,34 +17,33 @@ public class Employee implements Comparable<Employee> {
 
     /**
      * comparator, which sorts by name, age and salary
-     *
      * @param employee the object to be compared.
      */
     @Override
     public int compareTo(Employee employee) {
-        if (this.employeeName.compareTo(employee.getEmployeeName()) != 0) {
-            return this.employeeName.compareTo(employee.getEmployeeName());
+        if (this.name.compareTo(employee.getName()) != 0) {
+            return this.name.compareTo(employee.getName());
         }
-        if (this.employeeAge - employee.getEmployeeAge() != 0) {
-            return this.employeeAge - employee.getEmployeeAge();
+        if (this.age - employee.getAge() != 0) {
+            return this.age - employee.getAge();
         }
         return (int) (this.salary - employee.getSalary());
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public String getName() {
+        return name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getEmployeeAge() {
-        return employeeAge;
+    public int getAge() {
+        return age;
     }
 
-    public void setEmployeeAge(int employeeAge) {
-        this.employeeAge = employeeAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public double getSalary() {
@@ -70,7 +64,7 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return "Name: " + employeeName + ", Age: " + employeeAge +
+        return "Name: " + name + ", Age: " + age +
                 ", salary " + salary +
                 ", rating " + rating + "\n";
     }

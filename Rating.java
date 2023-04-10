@@ -7,18 +7,13 @@ public enum Rating {
     D(0),
     E(0.95);
 
+    private final double value;
 
-    // TODO слово Rating  в названии избыточно, это итак уже рейтинг просто value достаточно
-    // Будет Rating.getValue - "получить значение ретинга"
-
-    private final double ratingScore;
-
-    Rating(double ratingScore) {
-        this.ratingScore = ratingScore;
+    Rating(double value) {
+        this.value = value;
     }
 
-
     public double getRatingScore() {
-        return ratingScore;
+        return value;
     }
 }

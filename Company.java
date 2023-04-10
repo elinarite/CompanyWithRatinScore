@@ -1,6 +1,7 @@
 package TaskWork.BasicForAll4;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.List;
 
 public class Company {
