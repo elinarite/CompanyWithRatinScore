@@ -78,11 +78,11 @@ public class GeneratorEmployeesList {
      * Method for print:
      * params:  scanNumberOfEmployee() - method that reads through the scanner how many employees need to be created
      * params: employeeListBeforeSalaryBonus - create a temporary variable to which we add a list of generated employees,
-     * sortEmployeesByPersonalData() - Sorts Employee by Name, Age and Salary,
-     * System.out.println(employeeListBeforeSalaryBonus); - displays a list of employees
-     * employeeListAfterSalaryBonus - create a temporary variable to which we add a list of generated employees,
-     * which sorts by rating and adds a bonus to the salary.
-     * System.out.println(employeeListAfterSalaryBonus) - displays a list of employees with new salary
+     * params: sortEmployeesByPersonalData() - Sorts Employee by Name, Age and Salary,
+     * params: System.out.println(employeeListBeforeSalaryBonus); - displays a list of employees
+     * params: employeeListAfterSalaryBonus - create a temporary variable to which we add a list of generated employees,
+     * params: which sorts by rating and adds a bonus to the salary.
+     * params: System.out.println(employeeListAfterSalaryBonus) - displays a list of employees with new salary
      */
     public static void print() {
         scanNumberOfEmployee();
