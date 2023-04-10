@@ -12,9 +12,10 @@ public class GeneratorEmployeesList {
         return numberOfEmployees;
     }
 
-    public static void setNumberOfEmployees(int numberOfEmployees) {
+    private static void setNumberOfEmployees(int numberOfEmployees) {
         GeneratorEmployeesList.numberOfEmployees = numberOfEmployees;
     }
+
     /**
      * method that reads through the scanner how many employees need to be created
      */
@@ -24,14 +25,15 @@ public class GeneratorEmployeesList {
         GeneratorEmployeesList.setNumberOfEmployees(scanner.nextInt());
         scanner.close();
     }
-    
+
     /**
      * adds generated employees to the list,
      * according to the specified number in the parameters
+     *
      * @param numberOfEmployees - number of Employee
      * @return List with Employee
      */
-    public static List<Employee> createEmployeeList(int numberOfEmployees) {
+    private static List<Employee> createEmployeeList(int numberOfEmployees) {
         List<Employee> employeeList = new ArrayList<>();
         for (int i = 0; i < numberOfEmployees; i++) {
             Employee employee = Generator.createRandomEmployee();
@@ -51,10 +53,10 @@ public class GeneratorEmployeesList {
     /**
      * method, which changes employee's wages based on rating
      */
-    public static List<Employee> recalculateSalaries(List<Employee> employeeList) {
-        Iterator <Employee> iterator = employeeList.iterator();
-        while(iterator.hasNext()){
-          Employee employee  = iterator.next();
+    private static List<Employee> recalculateSalaries(List<Employee> employeeList) {
+        Iterator<Employee> iterator = employeeList.iterator();
+        while (iterator.hasNext()) {
+            Employee employee = iterator.next();
             if (employee.getRating().getRatingScore() == 0) {
             } else {
                 employee.setSalary(employee.getSalary() * employee.getRating().getRatingScore());
@@ -67,7 +69,7 @@ public class GeneratorEmployeesList {
      * sorts employees by rating
      */
 
-    public static List<Employee> sortByRating(List<Employee> employeeList) {
+    private static List<Employee> sortByRating(List<Employee> employeeList) {
         employeeList.sort(new ComparatorRating());
         return employeeList;
     }
